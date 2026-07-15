@@ -9,15 +9,15 @@ import type {
 export const storeConfig = {
 	/** Set to true to pull live metadata from the App Store at build time */
 	fetchRealData: false,
-	/** Numeric App Store app ID (without the "id" prefix) */
-	appStoreAppId: 686449807,
+	/** Numeric App Store app ID (without the "id" prefix) 
+	appStoreAppId: 686449807,*/
 } as const;
 
 export const site = {
-	name: "Your App Name",
-	url: "https://your-domain.com",
+	name: "GPT Translator",
+	url: "https://translator.appelements.digital",
 	description:
-		"Here you can write a brief description of your application. Tell users about its main features and benefits in 1-2 sentences.",
+		"GPT Translator is a powerful translation app that helps you communicate effortlessly across languages. Translate text, voice, and images instantly with high accuracy.",
 	logo: "/favicon.svg",
 	keywords: ["mobile app", "landing page", "nextjs", "react", "typescript"],
 	storeLinks: {
