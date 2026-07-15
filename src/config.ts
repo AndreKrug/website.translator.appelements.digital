@@ -9,8 +9,8 @@ import type {
 export const storeConfig = {
 	/** Set to true to pull live metadata from the App Store at build time */
 	fetchRealData: false,
-	/** Numeric App Store app ID (without the "id" prefix) 
-	appStoreAppId: 686449807,*/
+	/** Numeric App Store app ID (without the "id" prefix) */
+	appStoreAppId: 686449807,
 } as const;
 
 export const site = {
