@@ -16,7 +16,7 @@
 	"dependencies": {
 		"@tailwindcss/typography": "^0.5.20",
 		"framer-motion": "^12.42.0",
-		"marked": "^18.0.5",
+		"marked": "^18.0.6",
 		"next": "^16.2.9",
 		"react": "^19.2.7",
 		"react-dom": "^19.2.7",
