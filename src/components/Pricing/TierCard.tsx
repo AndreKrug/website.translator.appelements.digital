@@ -13,12 +13,12 @@ const TierCard = ({ tier, index }: TierCardProps) => (
 		whileHover={{ y: -4 }}
 		className={`relative flex flex-col rounded-2xl border p-7 transition-shadow duration-300 ${
 			tier.highlighted
-				? "border-violet-400/60 bg-white shadow-[0_0_0_1px_rgba(139,92,246,0.15),0_8px_32px_rgba(139,92,246,0.12)] dark:border-violet-500/50 dark:bg-violet-500/5 dark:shadow-[0_0_0_1px_rgba(139,92,246,0.2),0_8px_32px_rgba(139,92,246,0.15)]"
+				? "border-picton-400/60 bg-white shadow-[0_0_0_1px_rgba(14,165,233,0.15),0_8px_32px_rgba(14,165,233,0.12)] dark:border-picton-500/50 dark:bg-picton-500/5 dark:shadow-[0_0_0_1px_rgba(14,165,233,0.2),0_8px_32px_rgba(14,165,233,0.15)]"
 				: "border-gray-200 bg-white shadow-sm dark:border-white/8 dark:bg-white/4"
 		}`}
 	>
 		{tier.badge && (
-			<span className="absolute -top-3.5 left-1/2 -translate-x-1/2 inline-flex items-center whitespace-nowrap rounded-full bg-violet-600 px-4 py-1.5 text-[11px] font-bold uppercase tracking-widest text-white shadow-lg shadow-violet-500/40 ring-1 ring-violet-400/50">
+			<span className="absolute -top-3.5 left-1/2 -translate-x-1/2 inline-flex items-center whitespace-nowrap rounded-full bg-picton-600 px-4 py-1.5 text-[11px] font-bold uppercase tracking-widest text-white shadow-lg shadow-picton-500/40 ring-1 ring-picton-400/50">
 				{tier.badge}
 			</span>
 		)}
@@ -46,7 +46,7 @@ const TierCard = ({ tier, index }: TierCardProps) => (
 					<span
 						className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${
 							tier.highlighted
-								? "bg-violet-100 text-violet-600 dark:bg-violet-500/15 dark:text-violet-400"
+								? "bg-picton-100 text-picton-600 dark:bg-picton-500/15 dark:text-picton-400"
 								: "bg-gray-100 text-gray-600 dark:bg-white/8 dark:text-white/60"
 						}`}
 					>
@@ -61,7 +61,7 @@ const TierCard = ({ tier, index }: TierCardProps) => (
 			href={tier.ctaHref}
 			className={`w-full rounded-xl px-5 py-3 text-center text-sm font-semibold transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] ${
 				tier.highlighted
-					? "bg-violet-600 text-white shadow-md shadow-violet-500/20 hover:bg-violet-500"
+					? "bg-picton-600 text-white shadow-md shadow-picton-500/20 hover:bg-picton-500"
 					: "border border-gray-800 bg-gray-900 text-white hover:bg-gray-800 dark:border-white/10 dark:bg-white/8 dark:hover:bg-white/14"
 			}`}
 		>

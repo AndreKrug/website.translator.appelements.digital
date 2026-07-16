@@ -14,10 +14,10 @@ export const storeConfig = {
 } as const;
 
 export const site = {
-	name: "GPT Translator",
+	name: "___ Translator",
 	url: "https://translator.appelements.digital",
 	description:
-		"GPT Translator is a powerful translation app that helps you communicate effortlessly across languages. Translate text, voice, and images instantly with high accuracy.",
+		"Ihre Texte. Ihre Kontrolle. Professionell übersetzt.",
 	logo: "/AppIcon.png",
 	keywords: ["mobile app", "landing page", "nextjs", "react", "typescript"],
 	storeLinks: {

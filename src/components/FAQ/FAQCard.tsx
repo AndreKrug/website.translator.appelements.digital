@@ -12,7 +12,7 @@ const FAQCard = ({ item, index }: FAQCardProps) => (
 		className="card-base flex flex-col gap-3 p-6"
 	>
 		<div className="flex items-center gap-3">
-			<span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-violet-100 bg-violet-50 text-[11px] font-bold tabular-nums text-violet-600 dark:border-violet-500/20 dark:bg-violet-500/10 dark:text-violet-400">
+			<span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-picton-100 bg-picton-50 text-[11px] font-bold tabular-nums text-picton-600 dark:border-picton-500/20 dark:bg-picton-500/10 dark:text-picton-400">
 				{String(index + 1).padStart(2, "0")}
 			</span>
 			<h3 className="text-sm font-semibold text-gray-900 dark:text-white md:text-base">

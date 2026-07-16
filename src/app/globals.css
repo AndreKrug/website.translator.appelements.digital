@@ -5,6 +5,17 @@
 
 @theme {
 	--breakpoint-xs: 410px;
+
+	--color-picton-50: #f0f9ff;
+	--color-picton-100: #e0f2fe;
+	--color-picton-200: #bae6fd;
+	--color-picton-300: #7dd3fc;
+	--color-picton-400: #38bdf8;
+	--color-picton-500: #0ea5e9;
+	--color-picton-600: #0284c7;
+	--color-picton-700: #0369a1;
+	--color-picton-800: #075985;
+	--color-picton-900: #0b466a;
 }
 
 @layer components {
@@ -37,7 +48,7 @@
 	}
 
 	.section-label {
-		@apply inline-flex items-center gap-2 px-3 py-1 rounded-full border border-violet-300 dark:border-violet-500/30 bg-violet-50 dark:bg-violet-500/10 text-violet-600 dark:text-violet-400 text-xs font-semibold uppercase tracking-widest;
+		@apply inline-flex items-center gap-2 px-3 py-1 rounded-full border border-picton-300 dark:border-picton-500/30 bg-picton-50 dark:bg-picton-500/10 text-picton-600 dark:text-picton-400 text-xs font-semibold uppercase tracking-widest;
 	}
 
 	.section-heading {
@@ -45,7 +56,7 @@
 	}
 
 	.accent {
-		@apply text-violet-600 dark:text-violet-400;
+		@apply text-picton-600 dark:text-picton-400;
 	}
 }
 
@@ -55,11 +66,11 @@ body::before {
 	inset: 0;
 	z-index: 0;
 	pointer-events: none;
-	background-image: radial-gradient(circle, rgba(109,40,217,0.28) 1px, transparent 1px);
+	background-image: radial-gradient(circle, rgba(3,105,161,0.28) 1px, transparent 1px);
 	background-size: 32px 32px;
 }
 html.dark body::before {
-	background-image: radial-gradient(circle, rgba(139,92,246,0.3) 1px, transparent 1px);
+	background-image: radial-gradient(circle, rgba(14,165,233,0.3) 1px, transparent 1px);
 }
 
 html.theme-switching *,
@@ -72,10 +83,10 @@ html.dark  { color-scheme: dark; }
 
 .screenshots-scrollbar {
 	scrollbar-width: thin;
-	scrollbar-color: rgba(109, 40, 217, 0.35) transparent;
+	scrollbar-color: rgba(3,105,161, 0.35) transparent;
 }
 .dark .screenshots-scrollbar {
-	scrollbar-color: rgba(139, 92, 246, 0.45) transparent;
+	scrollbar-color: rgba(14,165,233, 0.45) transparent;
 }
 
 .screenshots-scrollbar::-webkit-scrollbar { height: 4px; }
@@ -85,18 +96,18 @@ html.dark  { color-scheme: dark; }
 }
 
 .screenshots-scrollbar::-webkit-scrollbar-thumb {
-	background: rgba(109, 40, 217, 0.35);
+	background: rgba(3,105,161, 0.35);
 	border-radius: 4px;
 }
 .dark .screenshots-scrollbar::-webkit-scrollbar-thumb {
-	background: rgba(139, 92, 246, 0.45);
+	background: rgba(14,165,233, 0.45);
 }
 
 .screenshots-scrollbar::-webkit-scrollbar-thumb:hover {
-	background: rgba(109, 40, 217, 0.6);
+	background: rgba(3,105,161, 0.6);
 }
 .dark .screenshots-scrollbar::-webkit-scrollbar-thumb:hover {
-	background: rgba(139, 92, 246, 0.7);
+	background: rgba(14,165,233, 0.7);
 }
 
 .prose {
@@ -135,19 +146,19 @@ html.dark  { color-scheme: dark; }
 .prose li { margin: 0.5rem 0; padding-left: 0.25rem; font-size: 0.9375rem; }
 
 .prose li::marker { color: #a855f7; }
-.dark .prose li::marker { color: #a78bfa; }
+.dark .prose li::marker { color: #38bdf8; }
 
-.prose a { color: #7c3aed; text-decoration: underline; text-decoration-color: rgba(124,58,237,0.3); text-underline-offset: 3px; transition: all 0.2s; }
-.prose a:hover { color: #6d28d9; text-decoration-color: currentColor; }
-.dark .prose a { color: #a78bfa; }
-.dark .prose a:hover { color: #c4b5fd; }
+.prose a { color: #0284c7; text-decoration: underline; text-decoration-color: rgba(2,132,199,0.3); text-underline-offset: 3px; transition: all 0.2s; }
+.prose a:hover { color: #0369a1; text-decoration-color: currentColor; }
+.dark .prose a { color: #38bdf8; }
+.dark .prose a:hover { color: #7dd3fc; }
 
 .prose code {
-	background: rgba(124,58,237,0.07); border: 1px solid rgba(124,58,237,0.15);
+	background: rgba(2,132,199,0.07); border: 1px solid rgba(2,132,199,0.15);
 	border-radius: 0.375rem; padding: 0.15em 0.4em;
-	font-size: 0.875em; color: #7c3aed; font-family: ui-monospace, monospace;
+	font-size: 0.875em; color: #0284c7; font-family: ui-monospace, monospace;
 }
-.dark .prose code { background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.15); color: #c4b5fd; }
+.dark .prose code { background: rgba(56,189,248,0.08); border-color: rgba(56,189,248,0.15); color: #7dd3fc; }
 
 .prose pre {
 	background: #1e293b; border: 1px solid rgba(148,163,184,0.2);
@@ -158,7 +169,7 @@ html.dark  { color-scheme: dark; }
 .prose pre code { background: transparent; border: none; padding: 0; color: #e2e8f0; }
 
 .prose blockquote { border-left: 4px solid #a855f7; padding-left: 1.25rem; margin: 2rem 0; font-style: italic; }
-.dark .prose blockquote { border-color: #a78bfa; }
+.dark .prose blockquote { border-color: #38bdf8; }
 
 .prose table { width: 100%; margin: 2rem 0; border-collapse: collapse; }
 .prose thead { border-bottom: 2px solid #e5e7eb; }
