@@ -18,20 +18,22 @@ export const site = {
 	url: "https://translator.appelements.digital",
 	description:
 		"GPT Translator is a powerful translation app that helps you communicate effortlessly across languages. Translate text, voice, and images instantly with high accuracy.",
-	logo: "/favicon.svg",
+	logo: "/AppIcon.png",
 	keywords: ["mobile app", "landing page", "nextjs", "react", "typescript"],
 	storeLinks: {
-		apple: "#",
-		google: "#",
+		// macOS DMG download URL
+		apple: "https://github.com/AndreKrug/app.translate/releases/download/v0.0.4/translator-macos.dmg",
+		// Windows EXE download URL
+		google: "https://github.com/AndreKrug/app.translate/releases/download/v0.0.4/translator-windows-setup-0.0.4.exe",
 	},
 	rating: {
 		score: 4.8,
 		count: "1.2K",
 	},
 	ageRating: "4+",
-	version: "1.0.0",
+	version: "0.0.4",
 	minimumOS: "13.0",
-	releaseDate: "Jan 10, 2026",
+	releaseDate: "July 05, 2026",
 	social: [
 		{ url: "#", icon: "RiInstagramFill", label: "Instagram" },
 		{ url: "#", icon: "RiTelegram2Fill", label: "Telegram" },
