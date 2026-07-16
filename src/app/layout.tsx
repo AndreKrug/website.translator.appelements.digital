@@ -30,8 +30,8 @@ export const metadata: Metadata = {
 		images: ["/og.png"],
 	},
 	icons: {
-		icon: { url: "/favicon.svg", type: "image/svg+xml" },
-		apple: "/favicon.svg",
+		icon: { url: "/favicon.ico", type: "image/x-icon" },
+		apple: "/favicon.ico",
 	},
 };
 
@@ -66,7 +66,10 @@ export default function RootLayout({
 			<head>
 				<script dangerouslySetInnerHTML={{ __html: themeScript }} />
 			</head>
-			<body className="bg-gray-50 text-gray-900 dark:bg-[#060606] dark:text-white">
+			<body
+				suppressHydrationWarning
+				className="bg-gray-50 text-gray-900 dark:bg-[#060606] dark:text-white"
+			>
 				<div className="mx-auto max-w-375">
 					{children}
 					<Footer name={site.name} logo={site.logo} />
