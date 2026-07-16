@@ -32,79 +32,79 @@ const AppHero = ({
 
 	return (
 		<section className="relative flex min-h-svh flex-col items-center overflow-hidden px-4 text-center">
-		<div className="relative z-10 flex w-full max-w-4xl flex-1 flex-col items-center justify-center py-14 sm:py-20">
-			<motion.div {...up(0)} className="relative mx-auto mb-5 w-fit sm:mb-8">
-				<img
-					src={logo}
-					alt={`${title} icon`}
-					fetchPriority="high"
-					loading="eager"
-					className="relative h-24 w-24 rounded-3xl border border-gray-200/50 object-cover shadow-2xl dark:border-white/10 sm:h-28 sm:w-28 md:h-32 md:w-32"
-				/>
-			</motion.div>
+			<div className="relative z-10 flex w-full max-w-4xl flex-1 flex-col items-center justify-center py-14 sm:py-20">
+				<motion.div {...up(0)} className="relative mx-auto mb-5 w-fit sm:mb-8">
+					<img
+						src={logo}
+						alt={`${title} icon`}
+						fetchPriority="high"
+						loading="eager"
+						className="relative h-24 w-24 rounded-3xl border border-gray-200/50 object-cover shadow-2xl dark:border-white/10 sm:h-28 sm:w-28 md:h-32 md:w-32"
+					/>
+				</motion.div>
 
-			<motion.div
-				{...up(0.05)}
-				className="mb-3 flex flex-wrap items-center justify-center gap-2.5 sm:mb-6"
-			>
-				<RatingStars rating={rating.score} />
-				<span className="text-sm text-gray-500 dark:text-white/45">
-					{rating.score} · {rating.count} ratings
-				</span>
-				<span className="rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-500 dark:border-white/10 dark:bg-white/5 dark:text-white/50">
-					{ageRating}
-				</span>
-			</motion.div>
+				<motion.div
+					{...up(0.05)}
+					className="mb-3 flex flex-wrap items-center justify-center gap-2.5 sm:mb-6"
+				>
+					<RatingStars rating={rating.score} />
+					<span className="text-sm text-gray-500 dark:text-white/45">
+						{rating.score} · {rating.count} ratings
+					</span>
+					<span className="rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-500 dark:border-white/10 dark:bg-white/5 dark:text-white/50">
+						{ageRating}
+					</span>
+				</motion.div>
 
-			<motion.h1
-				{...up(0.1)}
-				className="mb-4 bg-clip-text text-4xl font-black tracking-tight text-transparent sm:mb-6 sm:text-5xl md:text-6xl lg:text-7xl xl:text-[6.5rem]"
-				style={{
-					background:
-						"linear-gradient(90deg,#40ffaa,#4079ff,#40ffaa,#4079ff,#40ffaa) 0 0/200%",
-					WebkitBackgroundClip: "text",
-					backgroundClip: "text",
-					WebkitTextFillColor: "transparent",
+				<motion.h1
+					{...up(0.1)}
+					className="mb-4 bg-clip-text text-4xl font-black tracking-tight text-transparent sm:mb-6 sm:text-5xl md:text-6xl lg:text-7xl xl:text-[6.5rem]"
+					style={{
+						background:
+							"linear-gradient(90deg,#40ffaa,#4079ff,#40ffaa,#4079ff,#40ffaa) 0 0/200%",
+						WebkitBackgroundClip: "text",
+						backgroundClip: "text",
+						WebkitTextFillColor: "transparent",
+					}}
+				>
+					{title}
+				</motion.h1>
+
+				<motion.p
+					{...up(0.15)}
+					className="mx-auto mb-7 max-w-xl text-base leading-relaxed text-gray-600 sm:mb-10 sm:text-lg dark:text-white/55"
+				>
+					{description}
+				</motion.p>
+
+				<motion.div {...up(0.2)}>
+					<StoreButtons storeLinks={storeLinks} />
+				</motion.div>
+
+				<motion.div {...up(0.25)}>
+					<AppInfo
+						version={version}
+						minimumOS={minimumOS}
+						releaseDate={releaseDate}
+					/>
+				</motion.div>
+			</div>
+
+			<motion.button
+				type="button"
+				onClick={scrollToNextSection}
+				animate={{ y: [0, 8, 0] }}
+				transition={{
+					repeat: Number.POSITIVE_INFINITY,
+					duration: 2.2,
+					ease: "easeInOut",
 				}}
+				className="relative z-10 mb-8 rounded-full border border-gray-300/80 bg-white/90 p-2.5 text-gray-700 shadow-md shadow-gray-300/40 backdrop-blur-sm transition hover:scale-105 hover:bg-white dark:border-white/20 dark:bg-black/35 dark:text-white/75 dark:shadow-black/40 dark:hover:bg-black/45"
+				aria-label="Zum nächsten Abschnitt scrollen"
 			>
-				{title}
-			</motion.h1>
-
-			<motion.p
-				{...up(0.15)}
-				className="mx-auto mb-7 max-w-xl text-base leading-relaxed text-gray-600 sm:mb-10 sm:text-lg dark:text-white/55"
-			>
-				{description}
-			</motion.p>
-
-			<motion.div {...up(0.2)}>
-				<StoreButtons storeLinks={storeLinks} />
-			</motion.div>
-
-			<motion.div {...up(0.25)}>
-				<AppInfo
-					version={version}
-					minimumOS={minimumOS}
-					releaseDate={releaseDate}
-				/>
-			</motion.div>
-		</div>
-
-		<motion.button
-			type="button"
-			onClick={scrollToNextSection}
-			animate={{ y: [0, 8, 0] }}
-			transition={{
-				repeat: Number.POSITIVE_INFINITY,
-				duration: 2.2,
-				ease: "easeInOut",
-			}}
-			className="relative z-10 mb-8 rounded-full border border-gray-300/80 bg-white/90 p-2.5 text-gray-700 shadow-md shadow-gray-300/40 backdrop-blur-sm transition hover:scale-105 hover:bg-white dark:border-white/20 dark:bg-black/35 dark:text-white/75 dark:shadow-black/40 dark:hover:bg-black/45"
-			aria-label="Zum nächsten Abschnitt scrollen"
-		>
-			<FiChevronDown size={26} strokeWidth={2.5} />
-		</motion.button>
-	</section>
+				<FiChevronDown size={26} strokeWidth={2.5} />
+			</motion.button>
+		</section>
 	);
 };
 

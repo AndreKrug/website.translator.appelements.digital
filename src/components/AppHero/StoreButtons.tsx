@@ -32,7 +32,9 @@ const StoreButtons = ({ storeLinks }: StoreButtonsProps) => (
 				<span className="block text-[10px] font-normal leading-tight text-gray-500 dark:text-white/50">
 					Download for
 				</span>
-				<span className="block text-sm font-bold leading-tight">Windows (.exe)</span>
+				<span className="block text-sm font-bold leading-tight">
+					Windows (.exe)
+				</span>
 			</span>
 		</a>
 	</div>

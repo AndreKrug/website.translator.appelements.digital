@@ -16,15 +16,16 @@ export const storeConfig = {
 export const site = {
 	name: "LLM-Translator",
 	url: "https://translator.appelements.digital",
-	description:
-		"Ihre Texte. Ihre Kontrolle. Professionell übersetzt.",
+	description: "Ihre Texte. Ihre Kontrolle. Professionell übersetzt.",
 	logo: "/AppIcon.png",
 	keywords: ["mobile app", "landing page", "nextjs", "react", "typescript"],
 	storeLinks: {
 		// macOS DMG download URL
-		apple: "https://github.com/AndreKrug/app.translate/releases/download/v0.0.4/translator-macos.dmg",
+		apple:
+			"https://github.com/AndreKrug/app.translate/releases/download/v0.0.4/translator-macos.dmg",
 		// Windows EXE download URL
-		google: "https://github.com/AndreKrug/app.translate/releases/download/v0.0.4/translator-windows-setup-0.0.4.exe",
+		google:
+			"https://github.com/AndreKrug/app.translate/releases/download/v0.0.4/translator-windows-setup-0.0.4.exe",
 	},
 	rating: {
 		score: 4.8,
