@@ -14,7 +14,7 @@ export const storeConfig = {
 } as const;
 
 export const site = {
-	name: "___ Translator",
+	name: "LLM-Translator",
 	url: "https://translator.appelements.digital",
 	description:
 		"Ihre Texte. Ihre Kontrolle. Professionell übersetzt.",
