@@ -4,11 +4,10 @@ import type { ThemeMode } from "@/types";
 export const THEMES: {
 	key: ThemeMode;
 	Icon: React.ComponentType<{ className?: string }>;
-	label: string;
 }[] = [
-	{ key: "light", Icon: FiSun, label: "Light" },
-	{ key: "system", Icon: FiMonitor, label: "System" },
-	{ key: "dark", Icon: FiMoon, label: "Dark" },
+	{ key: "light", Icon: FiSun },
+	{ key: "system", Icon: FiMonitor },
+	{ key: "dark", Icon: FiMoon },
 ];
 
 export const isTheme = (v: string | null): v is ThemeMode =>

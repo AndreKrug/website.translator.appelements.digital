@@ -1,0 +1,234 @@
+{
+	"meta": {
+		"description": "Your texts. Your control. Professionally translated."
+	},
+	"common": {
+		"backToTop": "Back to top"
+	},
+	"nav": {
+		"features": "Features",
+		"screenshots": "Screenshots",
+		"pricing": "Pricing",
+		"reviews": "Reviews",
+		"faq": "FAQ"
+	},
+	"footer": {
+		"product": "Product",
+		"legal": "Legal",
+		"followUs": "Follow us",
+		"privacyPolicy": "Privacy Policy",
+		"termsOfService": "Terms of Service",
+		"allRightsReserved": "All rights reserved.",
+		"language": "Language"
+	},
+	"storeButtons": {
+		"downloadFor": "Download for",
+		"macos": "macOS (.dmg)",
+		"windows": "Windows (.exe)"
+	},
+	"hero": {
+		"headline": "<hl>Translated</hl> by AI. Controlled by you.",
+		"description": "Your texts. Your control. Professionally translated.",
+		"ratingsSuffix": "ratings",
+		"version": "Version",
+		"requires": "Requires",
+		"updated": "Updated",
+		"scrollAria": "Scroll to next section"
+	},
+	"screenshots": {
+		"label": "Screenshots",
+		"headingPrefix": "See it",
+		"headingAccent": "in action.",
+		"imageAlt": "Screenshot",
+		"captions": {
+			"standard": {
+				"title": "Standard Translator",
+				"description": "Pick source and target language, enter your text, translate. With automatic language detection and up to 50,000 characters per text."
+			},
+			"chat": {
+				"title": "Chat Translator",
+				"description": "Pick a target language and translate right in the chat. Ideal for conversations and quick follow-ups."
+			},
+			"local": {
+				"title": "Local LLM",
+				"description": "Connect Ollama or any OpenAI-compatible endpoint, or use OpenRouter or OpenAI. With a local model, your texts never leave your computer."
+			}
+		}
+	},
+	"lightbox": {
+		"close": "Close lightbox",
+		"previous": "Previous image",
+		"next": "Next image",
+		"goTo": "Go to image {n}"
+	},
+	"features": {
+		"label": "Features",
+		"headingPrefix": "Everything you need,",
+		"headingAccent": "in one application.",
+		"items": [
+			{
+				"title": "Main Feature",
+				"description": "Describe your main feature here. What makes it special?",
+				"icon": "FiStar"
+			},
+			{
+				"title": "Lightning Fast",
+				"description": "Optimized for speed so everything feels instant, even on older devices.",
+				"icon": "FiZap"
+			},
+			{
+				"title": "Offline Mode",
+				"description": "All your data is available offline. No internet? No problem.",
+				"icon": "FiBox"
+			},
+			{
+				"title": "Private & Secure",
+				"description": "End-to-end encryption keeps your data safe. We never sell your info.",
+				"icon": "FiShield"
+			},
+			{
+				"title": "Cloud Sync",
+				"description": "Stay in sync across all your devices. Changes appear everywhere instantly.",
+				"icon": "FiCloud"
+			},
+			{
+				"title": "Fully Customizable",
+				"description": "Tailor the experience to your workflow with powerful settings.",
+				"icon": "FiSliders"
+			}
+		]
+	},
+	"pricing": {
+		"label": "Pricing",
+		"headingPrefix": "Open source and free.",
+		"headingAccent": "Customization on request.",
+		"tiers": [
+			{
+				"name": "Contribute",
+				"price": "{repoHost}",
+				"description": "Browse the source code, report bugs and suggest new features.",
+				"features": [
+					"Full source code",
+					"Issues and feature requests",
+					"Pull requests welcome",
+					"Build and extend it yourself"
+				],
+				"cta": "View repository",
+				"ctaHref": "{repoUrl}"
+			},
+			{
+				"name": "Open Source",
+				"price": "€0",
+				"description": "LLM-Translator is freely available under the Apache 2.0 license, including for commercial use.",
+				"features": [
+					"Standard and chat translator",
+					"Local LLMs, e.g. via Ollama",
+					"OpenRouter, OpenAI and compatible APIs",
+					"Custom prompts and languages",
+					"macOS and Windows",
+					"Community support on {repoHost}"
+				],
+				"cta": "Download for free",
+				"ctaHref": "{repoUrl}/releases",
+				"highlighted": true,
+				"badge": "Apache 2.0"
+			},
+			{
+				"name": "Custom development",
+				"price": "On request",
+				"description": "Need LLM-Translator tailored to your organization? I build it to your requirements.",
+				"features": [
+					"Your own branding and logo",
+					"Integration with your AI infrastructure",
+					"Preconfigured prompts and languages",
+					"Installation and setup",
+					"New features as needed"
+				],
+				"cta": "Request customization",
+				"ctaHref": "mailto:computeragentur@gmail.com?subject=Request%3A%20LLM-Translator%20customization"
+			}
+		]
+	},
+	"reviews": {
+		"label": "Reviews",
+		"headingPrefix": "Loved by",
+		"headingAccent": "thousands of users.",
+		"items": [
+			{
+				"author": "Sarah K.",
+				"rating": 5,
+				"text": "This app has completely transformed how I manage my daily tasks. The interface is intuitive and the performance is outstanding!"
+			},
+			{
+				"author": "James M.",
+				"rating": 5,
+				"text": "I've tried dozens of similar apps, but this one stands out with its unique features and reliability. Highly recommended!"
+			},
+			{
+				"author": "Elena T.",
+				"rating": 4,
+				"text": "Great app with impressive functionality. The recent update made it even better. Just a few minor UI improvements would make it perfect."
+			},
+			{
+				"author": "Michael R.",
+				"rating": 5,
+				"text": "Customer support is exceptional. Had an issue and they resolved it within hours. The app itself is fantastic too!"
+			}
+		]
+	},
+	"faq": {
+		"label": "FAQ",
+		"headingPrefix": "Got questions?",
+		"headingAccent": "We've got answers.",
+		"items": [
+			{
+				"question": "Is the app free to download?",
+				"answer": "Yes! The app is free to download on both the App Store and Google Play. A Pro plan is available for users who want access to advanced features."
+			},
+			{
+				"question": "Which platforms are supported?",
+				"answer": "The app is available for iOS 13.0+ and Android 8.0+. A web version is coming soon."
+			},
+			{
+				"question": "Can I use the app offline?",
+				"answer": "Core features work fully offline. Your data syncs automatically when you reconnect to the internet."
+			},
+			{
+				"question": "How do I restore my purchases?",
+				"answer": "Open the app, go to Settings → Subscription, and tap Restore Purchases. Make sure you're signed in with the same account used for the original purchase."
+			},
+			{
+				"question": "Is my data private and secure?",
+				"answer": "Absolutely. Your data is encrypted in transit and at rest. We never sell or share your personal information with third parties. See our Privacy Policy for full details."
+			},
+			{
+				"question": "How do I reach support?",
+				"answer": "Tap Help in the app settings or email us at support@example.com. We respond within 24 hours on business days."
+			}
+		]
+	},
+	"legal": {
+		"sectionLabel": "Legal",
+		"onThisPage": "On This Page",
+		"lastUpdated": "Last updated",
+		"privacyPolicyTitle": "Privacy Policy",
+		"termsOfServiceTitle": "Terms of Service"
+	},
+	"notFound": {
+		"eyebrow": "404 — Page not found",
+		"heading": "Oops, wrong turn.",
+		"description": "This page doesn't exist or the link is broken. Double-check the URL or head back home.",
+		"backHome": "Back to home"
+	},
+	"themeToggle": {
+		"srLabel": "Color theme",
+		"light": "Light",
+		"dark": "Dark",
+		"system": "System"
+	},
+	"languageSwitcher": {
+		"srLabel": "Select language",
+		"de": "Deutsch",
+		"en": "English"
+	}
+}

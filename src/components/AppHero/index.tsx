@@ -1,11 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { FiChevronDown } from "react-icons/fi";
 import RatingStars from "@/components/RatingStars";
 import type { AppHeroProps } from "@/types";
 import AppInfo from "./AppInfo";
 import StoreButtons from "./StoreButtons";
+import TileField from "./TileField";
 
 const up = (delay = 0) => ({
 	initial: { opacity: 0, y: 28 },
@@ -24,6 +26,7 @@ const AppHero = ({
 	minimumOS,
 	releaseDate,
 }: AppHeroProps) => {
+	const t = useTranslations("hero");
 	const scrollToNextSection = () => {
 		document
 			.getElementById("screenshots")
@@ -31,80 +34,90 @@ const AppHero = ({
 	};
 
 	return (
-		<section className="relative flex min-h-svh flex-col items-center overflow-hidden px-4 text-center">
-		<div className="relative z-10 flex w-full max-w-4xl flex-1 flex-col items-center justify-center py-14 sm:py-20">
-			<motion.div {...up(0)} className="relative mx-auto mb-5 w-fit sm:mb-8">
-				<img
-					src={logo}
-					alt={`${title} icon`}
-					fetchPriority="high"
-					loading="eager"
-					className="relative h-24 w-24 rounded-3xl border border-gray-200/50 object-cover shadow-2xl dark:border-white/10 sm:h-28 sm:w-28 md:h-32 md:w-32"
-				/>
-			</motion.div>
+		<section className="relative flex min-h-svh flex-col px-4 text-center md:px-8 md:text-left">
+			<TileField />
 
-			<motion.div
-				{...up(0.05)}
-				className="mb-3 flex flex-wrap items-center justify-center gap-2.5 sm:mb-6"
-			>
-				<RatingStars rating={rating.score} />
-				<span className="text-sm text-gray-500 dark:text-white/45">
-					{rating.score} · {rating.count} ratings
-				</span>
-				<span className="rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-500 dark:border-white/10 dark:bg-white/5 dark:text-white/50">
-					{ageRating}
-				</span>
-			</motion.div>
+			<div className="relative z-10 flex w-full max-w-2xl flex-1 flex-col items-center pt-28 pb-[380px] sm:pt-36 md:items-start md:justify-center md:pt-40 md:pb-24 lg:max-w-3xl">
+				<motion.div
+					{...up(0)}
+					className="mb-6 flex flex-wrap items-center justify-center gap-3 md:justify-start"
+				>
+					<img
+						src={logo}
+						alt={`${title} icon`}
+						fetchPriority="high"
+						loading="eager"
+						className="h-12 w-12 rounded-xl border border-gray-200/50 object-cover shadow-lg dark:border-white/10"
+					/>
+					<div className="flex flex-col items-start gap-1">
+						<span className="text-sm font-bold text-heading">{title}</span>
+						<span className="flex items-center gap-2 text-xs text-gray-500 dark:text-white/45">
+							<RatingStars rating={rating.score} />
+							{rating.score} · {rating.count} {t("ratingsSuffix")}
+							<span className="rounded-md border border-gray-200 bg-gray-100 px-1.5 py-0.5 font-medium dark:border-white/10 dark:bg-white/5">
+								{ageRating}
+							</span>
+						</span>
+					</div>
+				</motion.div>
 
-			<motion.h1
-				{...up(0.1)}
-				className="mb-4 bg-clip-text text-4xl font-black tracking-tight text-transparent sm:mb-6 sm:text-5xl md:text-6xl lg:text-7xl xl:text-[6.5rem]"
-				style={{
-					background:
-						"linear-gradient(90deg,#40ffaa,#4079ff,#40ffaa,#4079ff,#40ffaa) 0 0/200%",
-					WebkitBackgroundClip: "text",
-					backgroundClip: "text",
-					WebkitTextFillColor: "transparent",
+				<motion.h1
+					{...up(0.1)}
+					className="mb-6 max-w-[400px] text-[2.5rem] font-bold leading-[115%] tracking-tight text-heading md:max-w-[640px] md:text-[3.5rem] lg:max-w-[820px] lg:text-7xl lg:leading-[100%]"
+				>
+					{t.rich("headline", {
+						hl: (chunks) => (
+							<span
+								style={{
+									background:
+										"linear-gradient(90deg,#40ffaa,#4079ff,#40ffaa,#4079ff,#40ffaa) 0 0/200%",
+									WebkitBackgroundClip: "text",
+									backgroundClip: "text",
+									WebkitTextFillColor: "transparent",
+								}}
+							>
+								{chunks}
+							</span>
+						),
+					})}
+				</motion.h1>
+
+				<motion.p
+					{...up(0.15)}
+					className="mb-8 max-w-[400px] text-lg leading-[160%] text-gray-600 md:max-w-lg md:text-[1.375rem] lg:mb-12 dark:text-white/55"
+				>
+					{description ?? t("description")}
+				</motion.p>
+
+				<motion.div {...up(0.2)}>
+					<StoreButtons storeLinks={storeLinks} className="md:justify-start" />
+				</motion.div>
+
+				<motion.div {...up(0.25)}>
+					<AppInfo
+						version={version}
+						minimumOS={minimumOS}
+						releaseDate={releaseDate}
+						className="md:justify-start"
+					/>
+				</motion.div>
+			</div>
+
+			<motion.button
+				type="button"
+				onClick={scrollToNextSection}
+				animate={{ y: [0, 8, 0] }}
+				transition={{
+					repeat: Number.POSITIVE_INFINITY,
+					duration: 2.2,
+					ease: "easeInOut",
 				}}
+				className="relative z-10 mx-auto mb-8 rounded-full border border-gray-300/80 bg-white/90 p-2.5 text-gray-700 shadow-md shadow-gray-300/40 backdrop-blur-sm transition hover:scale-105 hover:bg-white dark:border-white/20 dark:bg-black/35 dark:text-white/75 dark:shadow-black/40 dark:hover:bg-black/45"
+				aria-label={t("scrollAria")}
 			>
-				{title}
-			</motion.h1>
-
-			<motion.p
-				{...up(0.15)}
-				className="mx-auto mb-7 max-w-xl text-base leading-relaxed text-gray-600 sm:mb-10 sm:text-lg dark:text-white/55"
-			>
-				{description}
-			</motion.p>
-
-			<motion.div {...up(0.2)}>
-				<StoreButtons storeLinks={storeLinks} />
-			</motion.div>
-
-			<motion.div {...up(0.25)}>
-				<AppInfo
-					version={version}
-					minimumOS={minimumOS}
-					releaseDate={releaseDate}
-				/>
-			</motion.div>
-		</div>
-
-		<motion.button
-			type="button"
-			onClick={scrollToNextSection}
-			animate={{ y: [0, 8, 0] }}
-			transition={{
-				repeat: Number.POSITIVE_INFINITY,
-				duration: 2.2,
-				ease: "easeInOut",
-			}}
-			className="relative z-10 mb-8 rounded-full border border-gray-300/80 bg-white/90 p-2.5 text-gray-700 shadow-md shadow-gray-300/40 backdrop-blur-sm transition hover:scale-105 hover:bg-white dark:border-white/20 dark:bg-black/35 dark:text-white/75 dark:shadow-black/40 dark:hover:bg-black/45"
-			aria-label="Zum nächsten Abschnitt scrollen"
-		>
-			<FiChevronDown size={26} strokeWidth={2.5} />
-		</motion.button>
-	</section>
+				<FiChevronDown size={26} strokeWidth={2.5} />
+			</motion.button>
+		</section>
 	);
 };
 

@@ -1,15 +1,15 @@
 export const NAV_LINKS = [
-	{ label: "Features", href: "#features" },
-	{ label: "Screenshots", href: "#screenshots" },
-	{ label: "Pricing", href: "#pricing" },
-	{ label: "Reviews", href: "#reviews" },
-	{ label: "FAQ", href: "#faq" },
-];
+	{ key: "features", href: "#features" },
+	{ key: "screenshots", href: "#screenshots" },
+	{ key: "pricing", href: "#pricing" },
+	{ key: "reviews", href: "#reviews" },
+	{ key: "faq", href: "#faq" },
+] as const;
 
 export const LEGAL_LINKS = [
-	{ label: "Privacy Policy", href: "/privacy-policy" },
-	{ label: "Terms of Service", href: "/terms-of-service" },
-];
+	{ key: "privacyPolicy", href: "/privacy-policy" },
+	{ key: "termsOfService", href: "/terms-of-service" },
+] as const;
 
 export const fade = (delay = 0) => ({
 	initial: { opacity: 0, y: 16 },

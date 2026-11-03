@@ -59,6 +59,10 @@ const TierCard = ({ tier, index }: TierCardProps) => (
 
 		<a
 			href={tier.ctaHref}
+			{...(tier.ctaHref.startsWith("http") && {
+				target: "_blank",
+				rel: "noopener noreferrer",
+			})}
 			className={`w-full rounded-xl px-5 py-3 text-center text-sm font-semibold transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] ${
 				tier.highlighted
 					? "bg-picton-600 text-white shadow-md shadow-picton-500/20 hover:bg-picton-500"

@@ -4,14 +4,7 @@ import Features from "@/components/Features";
 import Pricing from "@/components/Pricing";
 import Reviews from "@/components/Reviews";
 import Screenshots from "@/components/Screenshots";
-import {
-	faqs,
-	features,
-	pricingTiers,
-	reviews,
-	screenshots,
-	site,
-} from "@/config";
+import { screenshots, site } from "@/config";
 import { fetchStoreData } from "@/fetchStoreData";
 
 export default async function HomePage() {
@@ -19,7 +12,7 @@ export default async function HomePage() {
 
 	const app = {
 		name: storeData.name ?? site.name,
-		description: storeData.description ?? site.description,
+		description: storeData.description,
 		logo: storeData.logo ?? site.logo,
 		storeLinks: storeData.storeLinks ?? site.storeLinks,
 		rating: storeData.rating ?? site.rating,
@@ -27,7 +20,7 @@ export default async function HomePage() {
 		version: storeData.version ?? site.version,
 		minimumOS: storeData.minimumOS ?? site.minimumOS,
 		releaseDate: storeData.releaseDate ?? site.releaseDate,
-		screenshots: storeData.screenshots ?? screenshots,
+		screenshots: storeData.screenshots?.map((src) => ({ src })) ?? screenshots,
 	};
 
 	return (
@@ -47,16 +40,16 @@ export default async function HomePage() {
 				<Screenshots images={app.screenshots} />
 			</section>
 			<section id="features" className="mb-16 scroll-mt-8 md:mb-24">
-				<Features items={features} />
+				<Features />
 			</section>
 			<section id="pricing" className="mb-16 scroll-mt-8 md:mb-24">
-				<Pricing tiers={pricingTiers} />
+				<Pricing />
 			</section>
 			<section id="reviews" className="mb-16 scroll-mt-8 md:mb-24">
-				<Reviews items={reviews} />
+				<Reviews />
 			</section>
 			<section id="faq" className="mb-16 scroll-mt-8 md:mb-24">
-				<FAQ items={faqs} />
+				<FAQ />
 			</section>
 		</main>
 	);

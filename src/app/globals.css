@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme inline {
+	--font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+}
+
 @theme {
 	--breakpoint-xs: 410px;
 
@@ -73,6 +77,20 @@ html.dark body::before {
 	background-image: radial-gradient(circle, rgba(14,165,233,0.3) 1px, transparent 1px);
 }
 
+.tile-field-mask {
+	mask-image:
+		linear-gradient(to right, transparent, black 15%, black 85%, transparent),
+		linear-gradient(to bottom, transparent, black 25%, black 80%, transparent);
+	mask-composite: intersect;
+}
+@media (min-width: 48rem) {
+	.tile-field-mask {
+		mask-image:
+			linear-gradient(to left, black 35%, transparent 92%),
+			linear-gradient(to top, black 60%, transparent);
+	}
+}
+
 html.theme-switching *,
 html.theme-switching {
 	transition: none;
@@ -111,6 +129,7 @@ html.dark  { color-scheme: dark; }
 }
 
 .prose {
+	font-family: var(--font-sans);
 	max-width: 1000px;
 	line-height: 1.75;
 	color: #374151;

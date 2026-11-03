@@ -1,10 +1,12 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { FiChevronUp } from "react-icons/fi";
 
 const BackToTop = () => {
+	const t = useTranslations("common");
 	const [visible, setVisible] = useState(false);
 
 	useEffect(() => {
@@ -34,7 +36,7 @@ const BackToTop = () => {
 					whileTap={{ scale: 0.95 }}
 					onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 					className="button-base fixed bottom-4 right-4 z-40 flex h-9 w-9 items-center justify-center shadow-lg transition-shadow duration-200 hover:shadow-xl md:bottom-8 md:right-8 md:h-12 md:w-12"
-					aria-label="Back to top"
+					aria-label={t("backToTop")}
 				>
 					<FiChevronUp size={22} />
 				</motion.button>

@@ -1,10 +1,12 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { memo, useCallback, useEffect, useState } from "react";
 import type { ThemeMode } from "@/types";
 import { applyTheme, isTheme, THEMES } from "./theme";
 
 const ThemeToggle = () => {
+	const t = useTranslations("themeToggle");
 	const [theme, setTheme] = useState<ThemeMode>("system");
 	const [mounted, setMounted] = useState(false);
 
@@ -32,8 +34,8 @@ const ThemeToggle = () => {
 
 	return (
 		<fieldset className="inline-flex items-center gap-0.5 rounded-xl border border-gray-200 bg-gray-100/60 p-1 dark:border-white/10 dark:bg-white/4">
-			<legend className="sr-only">Color theme</legend>
-			{THEMES.map(({ key, Icon, label }) => (
+			<legend className="sr-only">{t("srLabel")}</legend>
+			{THEMES.map(({ key, Icon }) => (
 				<label
 					key={key}
 					className={`relative flex cursor-pointer items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-medium transition-all duration-200 ${
@@ -51,7 +53,7 @@ const ThemeToggle = () => {
 						className="sr-only"
 					/>
 					<Icon className="h-3.5 w-3.5 shrink-0" />
-					<span className="hidden sm:inline">{label}</span>
+					<span className="hidden sm:inline">{t(key)}</span>
 				</label>
 			))}
 		</fieldset>

@@ -1,8 +1,10 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { memo, useCallback, useEffect, useState } from "react";
 import { FiChevronLeft, FiChevronRight, FiX } from "react-icons/fi";
+import type { Screenshot } from "@/types";
 
 interface ControlsProps {
 	onClose: () => void;
@@ -17,7 +19,7 @@ interface DotsProps {
 }
 
 interface LightboxProps {
-	images: string[];
+	images: Screenshot[];
 	isOpen: boolean;
 	currentIndex: number;
 	onClose: () => void;
@@ -29,93 +31,101 @@ interface LightboxProps {
 const navButtonClass =
 	"button-base absolute z-10 rounded-full border-gray-200/50 bg-white/80 p-3 text-heading shadow-lg backdrop-blur-sm transition-colors hover:bg-white/90 dark:border-white/10 dark:bg-black/60 dark:hover:bg-black/80";
 
-const Controls = ({ onClose, onPrevious, onNext }: ControlsProps) => (
-	<>
-		<motion.button
-			type="button"
-			aria-label="Close lightbox"
-			onClick={onClose}
-			initial={{ opacity: 0, scale: 0.8 }}
-			animate={{ opacity: 1, scale: 1 }}
-			exit={{ opacity: 0, scale: 0.8 }}
-			whileHover={{ scale: 1.1, rotate: 90 }}
-			whileTap={{ scale: 0.9 }}
-			transition={{ duration: 0.2 }}
-			className={`${navButtonClass} right-4 top-4`}
-		>
-			<FiX size={20} />
-		</motion.button>
+const Controls = ({ onClose, onPrevious, onNext }: ControlsProps) => {
+	const t = useTranslations("lightbox");
 
-		<motion.button
-			type="button"
-			aria-label="Previous image"
-			onClick={(e) => {
-				e.stopPropagation();
-				onPrevious();
-			}}
-			initial={{ opacity: 0, x: -20 }}
-			animate={{ opacity: 1, x: 0 }}
-			exit={{ opacity: 0, x: -20 }}
-			whileHover={{ scale: 1.15, x: -5 }}
-			whileTap={{ scale: 0.9 }}
-			transition={{ duration: 0.2 }}
-			className={`${navButtonClass} left-4 top-1/2 -translate-y-1/2`}
-		>
-			<FiChevronLeft size={20} />
-		</motion.button>
-
-		<motion.button
-			type="button"
-			aria-label="Next image"
-			onClick={(e) => {
-				e.stopPropagation();
-				onNext();
-			}}
-			initial={{ opacity: 0, x: 20 }}
-			animate={{ opacity: 1, x: 0 }}
-			exit={{ opacity: 0, x: 20 }}
-			whileHover={{ scale: 1.15, x: 5 }}
-			whileTap={{ scale: 0.9 }}
-			transition={{ duration: 0.2 }}
-			className={`${navButtonClass} right-4 top-1/2 -translate-y-1/2`}
-		>
-			<FiChevronRight size={20} />
-		</motion.button>
-	</>
-);
-
-const Dots = ({ count, currentIndex, onSelect }: DotsProps) => (
-	<motion.div
-		initial={{ opacity: 0, y: 20 }}
-		animate={{ opacity: 1, y: 0 }}
-		exit={{ opacity: 0, y: 20 }}
-		transition={{ duration: 0.2 }}
-		className="absolute bottom-4 left-0 right-0 flex justify-center gap-2"
-	>
-		{Array.from({ length: count }, (_, index) => (
+	return (
+		<>
 			<motion.button
-				// biome-ignore lint/suspicious/noArrayIndexKey: dot nav has no stable id
-				key={index}
 				type="button"
-				aria-label={`Go to image ${index + 1}`}
+				aria-label={t("close")}
+				onClick={onClose}
+				initial={{ opacity: 0, scale: 0.8 }}
+				animate={{ opacity: 1, scale: 1 }}
+				exit={{ opacity: 0, scale: 0.8 }}
+				whileHover={{ scale: 1.1, rotate: 90 }}
+				whileTap={{ scale: 0.9 }}
+				transition={{ duration: 0.2 }}
+				className={`${navButtonClass} right-4 top-4`}
+			>
+				<FiX size={20} />
+			</motion.button>
+
+			<motion.button
+				type="button"
+				aria-label={t("previous")}
 				onClick={(e) => {
 					e.stopPropagation();
-					onSelect(index);
+					onPrevious();
 				}}
-				initial={{ scale: 0 }}
-				animate={{ scale: 1 }}
-				whileHover={{ scale: 1.5 }}
-				whileTap={{ scale: 0.8 }}
-				transition={{ duration: 0.2, ease: "easeInOut" }}
-				className={`h-2 w-2 rounded-full transition-colors ${
-					index === currentIndex
-						? "bg-gray-800 dark:bg-white"
-						: "bg-gray-500 hover:bg-gray-700 dark:bg-white/60 dark:hover:bg-white/80"
-				}`}
-			/>
-		))}
-	</motion.div>
-);
+				initial={{ opacity: 0, x: -20 }}
+				animate={{ opacity: 1, x: 0 }}
+				exit={{ opacity: 0, x: -20 }}
+				whileHover={{ scale: 1.15, x: -5 }}
+				whileTap={{ scale: 0.9 }}
+				transition={{ duration: 0.2 }}
+				className={`${navButtonClass} left-4 top-1/2 -translate-y-1/2`}
+			>
+				<FiChevronLeft size={20} />
+			</motion.button>
+
+			<motion.button
+				type="button"
+				aria-label={t("next")}
+				onClick={(e) => {
+					e.stopPropagation();
+					onNext();
+				}}
+				initial={{ opacity: 0, x: 20 }}
+				animate={{ opacity: 1, x: 0 }}
+				exit={{ opacity: 0, x: 20 }}
+				whileHover={{ scale: 1.15, x: 5 }}
+				whileTap={{ scale: 0.9 }}
+				transition={{ duration: 0.2 }}
+				className={`${navButtonClass} right-4 top-1/2 -translate-y-1/2`}
+			>
+				<FiChevronRight size={20} />
+			</motion.button>
+		</>
+	);
+};
+
+const Dots = ({ count, currentIndex, onSelect }: DotsProps) => {
+	const t = useTranslations("lightbox");
+
+	return (
+		<motion.div
+			initial={{ opacity: 0, y: 20 }}
+			animate={{ opacity: 1, y: 0 }}
+			exit={{ opacity: 0, y: 20 }}
+			transition={{ duration: 0.2 }}
+			className="absolute bottom-4 left-0 right-0 flex justify-center gap-2"
+		>
+			{Array.from({ length: count }, (_, index) => (
+				<motion.button
+					// biome-ignore lint/suspicious/noArrayIndexKey: dot nav has no stable id
+					key={index}
+					type="button"
+					aria-label={t("goTo", { n: index + 1 })}
+					onClick={(e) => {
+						e.stopPropagation();
+						onSelect(index);
+					}}
+					initial={{ scale: 0 }}
+					animate={{ scale: 1 }}
+					whileHover={{ scale: 1.5 }}
+					whileTap={{ scale: 0.8 }}
+					transition={{ duration: 0.2, ease: "easeInOut" }}
+					className={`h-2 w-2 rounded-full transition-colors ${
+						index === currentIndex
+							? "bg-gray-800 dark:bg-white"
+							: "bg-gray-500 hover:bg-gray-700 dark:bg-white/60 dark:hover:bg-white/80"
+					}`}
+				/>
+			))}
+		</motion.div>
+	);
+};
 
 const slideVariants = {
 	enter: (dir: number) => ({ x: dir > 0 ? 60 : -60, opacity: 0, scale: 0.97 }),
@@ -132,6 +142,7 @@ const Lightbox = ({
 	onNext,
 	onSelect,
 }: LightboxProps) => {
+	const t = useTranslations("screenshots");
 	const [direction, setDirection] = useState(0);
 
 	// Prevent body scroll while lightbox is open
@@ -189,8 +200,12 @@ const Lightbox = ({
 							animate="center"
 							exit="exit"
 							transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-							src={images[currentIndex]}
-							alt={`Screenshot ${currentIndex + 1}`}
+							src={images[currentIndex]?.src}
+							alt={
+								images[currentIndex]?.caption
+									? t(`captions.${images[currentIndex].caption}.title`)
+									: `${t("imageAlt")} ${currentIndex + 1}`
+							}
 							onClick={(e) => e.stopPropagation()}
 							className="max-h-[95vh] max-w-[95vw] rounded-xl object-contain shadow-2xl md:max-h-[90vh] md:max-w-[85vw]"
 						/>

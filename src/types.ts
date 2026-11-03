@@ -1,6 +1,8 @@
+import type { Locale } from "@/i18n/locales";
+
 export interface AppHeroProps {
 	title: string;
-	description: string;
+	description?: string;
 	logo: string;
 	storeLinks: { apple: string; google: string };
 	rating: { score: number; count: string };
@@ -35,10 +37,9 @@ export interface SocialLink {
 }
 
 export interface MarkdownLayoutProps {
-	htmlContent: string;
-	rawContent: string;
-	title?: string;
-	lastUpdated?: string;
+	content: Record<Locale, { html: string; raw: string }>;
+	title: Record<Locale, string>;
+	lastUpdated: string;
 }
 
 export interface PricingTier {
@@ -70,16 +71,19 @@ export type ThemeMode = "light" | "dark" | "system";
 
 export interface StoreButtonsProps {
 	storeLinks: { apple: string; google: string };
+	className?: string;
 }
 
 export interface AppInfoProps {
 	version?: string;
+	className?: string;
 	minimumOS?: string;
 	releaseDate?: string;
 }
 
 export interface BreadcrumbItem {
-	label: string;
+	label?: string;
+	labelKey?: string;
 	href?: string;
 }
 
@@ -92,17 +96,9 @@ export interface RatingStarsProps {
 	max?: number;
 }
 
-export interface FeaturesProps {
-	items: Feature[];
-}
-
 export interface FeatureCardProps {
 	feature: Feature;
 	index: number;
-}
-
-export interface ReviewsProps {
-	items: Review[];
 }
 
 export interface ReviewCardProps {
@@ -110,17 +106,9 @@ export interface ReviewCardProps {
 	index: number;
 }
 
-export interface FAQProps {
-	items: FAQItem[];
-}
-
 export interface FAQCardProps {
 	item: FAQItem;
 	index: number;
-}
-
-export interface PricingProps {
-	tiers: PricingTier[];
 }
 
 export interface TierCardProps {
@@ -137,11 +125,17 @@ export interface FooterProps {
 	logo: string;
 }
 
+export interface Screenshot {
+	src: string;
+	/** Key under `screenshots.captions` in the messages */
+	caption?: "standard" | "chat" | "local";
+}
+
 export interface GalleryProps {
-	images: string[];
+	images: Screenshot[];
 	onOpen: (index: number) => void;
 }
 
 export interface ScreenshotsProps {
-	images: string[];
+	images: Screenshot[];
 }

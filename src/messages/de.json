@@ -1,0 +1,234 @@
+{
+	"meta": {
+		"description": "Ihre Texte. Ihre Kontrolle. Professionell übersetzt."
+	},
+	"common": {
+		"backToTop": "Nach oben"
+	},
+	"nav": {
+		"features": "Funktionen",
+		"screenshots": "Screenshots",
+		"pricing": "Preise",
+		"reviews": "Bewertungen",
+		"faq": "FAQ"
+	},
+	"footer": {
+		"product": "Produkt",
+		"legal": "Rechtliches",
+		"followUs": "Folgen Sie uns",
+		"privacyPolicy": "Datenschutz",
+		"termsOfService": "Nutzungsbedingungen",
+		"allRightsReserved": "Alle Rechte vorbehalten.",
+		"language": "Sprache"
+	},
+	"storeButtons": {
+		"downloadFor": "Herunterladen für",
+		"macos": "macOS (.dmg)",
+		"windows": "Windows (.exe)"
+	},
+	"hero": {
+		"headline": "<hl>Übersetzt</hl> mit KI. Kontrolliert von Ihnen.",
+		"description": "Ihre Texte. Ihre Kontrolle. Professionell übersetzt.",
+		"ratingsSuffix": "Bewertungen",
+		"version": "Version",
+		"requires": "Erfordert",
+		"updated": "Aktualisiert",
+		"scrollAria": "Zum nächsten Abschnitt scrollen"
+	},
+	"screenshots": {
+		"label": "Screenshots",
+		"headingPrefix": "Sieh es dir",
+		"headingAccent": "in Aktion an.",
+		"imageAlt": "Screenshot",
+		"captions": {
+			"standard": {
+				"title": "Standard-Übersetzer",
+				"description": "Quell- und Zielsprache wählen, Text eingeben, übersetzen. Mit automatischer Spracherkennung und bis zu 50.000 Zeichen pro Text."
+			},
+			"chat": {
+				"title": "Chat-Übersetzer",
+				"description": "Zielsprache wählen und direkt im Chat übersetzen. Ideal für Gespräche und schnelle Rückfragen."
+			},
+			"local": {
+				"title": "Lokales LLM",
+				"description": "Mit Ollama oder jedem OpenAI-kompatiblen Endpunkt verbinden, alternativ OpenRouter oder OpenAI. Mit einem lokalen Modell verlassen Ihre Texte nie Ihren Rechner."
+			}
+		}
+	},
+	"lightbox": {
+		"close": "Lightbox schließen",
+		"previous": "Vorheriges Bild",
+		"next": "Nächstes Bild",
+		"goTo": "Zu Bild {n} springen"
+	},
+	"features": {
+		"label": "Funktionen",
+		"headingPrefix": "Alles, was du brauchst,",
+		"headingAccent": "in einer Applikation.",
+		"items": [
+			{
+				"title": "Hauptfunktion",
+				"description": "Beschreibe hier deine Hauptfunktion. Was macht sie besonders?",
+				"icon": "FiStar"
+			},
+			{
+				"title": "Blitzschnell",
+				"description": "Optimiert für Geschwindigkeit — alles fühlt sich sofort an, auch auf älteren Geräten.",
+				"icon": "FiZap"
+			},
+			{
+				"title": "Offline-Modus",
+				"description": "Alle deine Daten sind auch offline verfügbar. Kein Internet? Kein Problem.",
+				"icon": "FiBox"
+			},
+			{
+				"title": "Privat & Sicher",
+				"description": "Ende-zu-Ende-Verschlüsselung schützt deine Daten. Wir verkaufen deine Informationen niemals.",
+				"icon": "FiShield"
+			},
+			{
+				"title": "Cloud-Synchronisation",
+				"description": "Bleib auf allen Geräten synchron. Änderungen erscheinen sofort überall.",
+				"icon": "FiCloud"
+			},
+			{
+				"title": "Vollständig anpassbar",
+				"description": "Passe die Erfahrung mit leistungsstarken Einstellungen an deinen Workflow an.",
+				"icon": "FiSliders"
+			}
+		]
+	},
+	"pricing": {
+		"label": "Preise",
+		"headingPrefix": "Open Source und kostenlos.",
+		"headingAccent": "Anpassung auf Wunsch.",
+		"tiers": [
+			{
+				"name": "Mitwirken",
+				"price": "{repoHost}",
+				"description": "Quellcode einsehen, Fehler melden und neue Funktionen vorschlagen.",
+				"features": [
+					"Vollständiger Quellcode",
+					"Issues und Feature-Wünsche",
+					"Pull Requests willkommen",
+					"Selbst bauen und erweitern"
+				],
+				"cta": "Zum Repository",
+				"ctaHref": "{repoUrl}"
+			},
+			{
+				"name": "Open Source",
+				"price": "0 €",
+				"description": "Der LLM-Translator ist frei unter der Apache-2.0-Lizenz verfügbar, auch für kommerzielle Nutzung.",
+				"features": [
+					"Standard- und Chat-Übersetzer",
+					"Lokale LLMs, z. B. über Ollama",
+					"OpenRouter, OpenAI und kompatible APIs",
+					"Eigene Prompts und Sprachen",
+					"macOS und Windows",
+					"Community-Support über {repoHost}"
+				],
+				"cta": "Kostenlos herunterladen",
+				"ctaHref": "{repoUrl}/releases",
+				"highlighted": true,
+				"badge": "Apache 2.0"
+			},
+			{
+				"name": "Individuelle Anpassung",
+				"price": "Auf Anfrage",
+				"description": "Sie brauchen den LLM-Translator zugeschnitten auf Ihr Unternehmen? Ich setze Ihre Anforderungen um.",
+				"features": [
+					"Eigenes Branding und Logo",
+					"Anbindung an Ihre KI-Infrastruktur",
+					"Vorkonfigurierte Prompts und Sprachen",
+					"Installation und Einrichtung",
+					"Neue Funktionen nach Bedarf"
+				],
+				"cta": "Anpassung anfragen",
+				"ctaHref": "mailto:computeragentur@gmail.com?subject=Anfrage%3A%20Anpassung%20LLM-Translator"
+			}
+		]
+	},
+	"reviews": {
+		"label": "Bewertungen",
+		"headingPrefix": "Geliebt von",
+		"headingAccent": "tausenden Nutzern.",
+		"items": [
+			{
+				"author": "Sarah K.",
+				"rating": 5,
+				"text": "Diese App hat die Art, wie ich meine täglichen Aufgaben verwalte, komplett verändert. Die Oberfläche ist intuitiv und die Leistung ist herausragend!"
+			},
+			{
+				"author": "James M.",
+				"rating": 5,
+				"text": "Ich habe Dutzende ähnlicher Apps ausprobiert, aber diese sticht durch ihre einzigartigen Funktionen und Zuverlässigkeit hervor. Absolut empfehlenswert!"
+			},
+			{
+				"author": "Elena T.",
+				"rating": 4,
+				"text": "Tolle App mit beeindruckendem Funktionsumfang. Das letzte Update hat sie noch besser gemacht. Nur ein paar kleine UI-Verbesserungen fehlen zur Perfektion."
+			},
+			{
+				"author": "Michael R.",
+				"rating": 5,
+				"text": "Der Kundensupport ist außergewöhnlich. Ich hatte ein Problem und es wurde innerhalb weniger Stunden gelöst. Die App selbst ist ebenfalls fantastisch!"
+			}
+		]
+	},
+	"faq": {
+		"label": "FAQ",
+		"headingPrefix": "Fragen?",
+		"headingAccent": "Wir haben Antworten.",
+		"items": [
+			{
+				"question": "Ist die App kostenlos herunterladbar?",
+				"answer": "Ja! Die App ist sowohl im App Store als auch bei Google Play kostenlos herunterladbar. Ein Pro-Plan ist für Nutzer verfügbar, die auf erweiterte Funktionen zugreifen möchten."
+			},
+			{
+				"question": "Welche Plattformen werden unterstützt?",
+				"answer": "Die App ist für iOS 13.0+ und Android 8.0+ verfügbar. Eine Web-Version folgt in Kürze."
+			},
+			{
+				"question": "Kann ich die App offline nutzen?",
+				"answer": "Kernfunktionen funktionieren vollständig offline. Deine Daten werden automatisch synchronisiert, sobald du wieder online bist."
+			},
+			{
+				"question": "Wie stelle ich meine Käufe wieder her?",
+				"answer": "Öffne die App, gehe zu Einstellungen → Abonnement und tippe auf „Käufe wiederherstellen“. Stelle sicher, dass du mit demselben Konto angemeldet bist, das für den ursprünglichen Kauf verwendet wurde."
+			},
+			{
+				"question": "Sind meine Daten privat und sicher?",
+				"answer": "Absolut. Deine Daten werden bei der Übertragung und Speicherung verschlüsselt. Wir verkaufen oder teilen deine persönlichen Informationen niemals mit Dritten. Details findest du in unserer Datenschutzerklärung."
+			},
+			{
+				"question": "Wie erreiche ich den Support?",
+				"answer": "Tippe in den App-Einstellungen auf „Hilfe“ oder schreibe uns eine E-Mail an support@example.com. Wir antworten innerhalb von 24 Stunden an Werktagen."
+			}
+		]
+	},
+	"legal": {
+		"sectionLabel": "Rechtliches",
+		"onThisPage": "Auf dieser Seite",
+		"lastUpdated": "Zuletzt aktualisiert",
+		"privacyPolicyTitle": "Datenschutzerklärung",
+		"termsOfServiceTitle": "Nutzungsbedingungen"
+	},
+	"notFound": {
+		"eyebrow": "404 — Seite nicht gefunden",
+		"heading": "Hoppla, falsch abgebogen.",
+		"description": "Diese Seite existiert nicht oder der Link ist fehlerhaft. Überprüfe die URL oder gehe zurück zur Startseite.",
+		"backHome": "Zurück zur Startseite"
+	},
+	"themeToggle": {
+		"srLabel": "Farbschema",
+		"light": "Hell",
+		"dark": "Dunkel",
+		"system": "System"
+	},
+	"languageSwitcher": {
+		"srLabel": "Sprache auswählen",
+		"de": "Deutsch",
+		"en": "English"
+	}
+}

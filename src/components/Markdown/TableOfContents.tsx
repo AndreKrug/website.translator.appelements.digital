@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { memo, useEffect, useState } from "react";
 
 const headingRegex = /^(#{2,3})\s+(.+)$/;
@@ -23,6 +24,7 @@ const extractHeadings = (content: string) =>
 		}, []);
 
 const TableOfContents = ({ content }: { content: string }) => {
+	const t = useTranslations("legal");
 	const [headings, setHeadings] = useState<
 		{ id: string; text: string; level: number }[]
 	>([]);
@@ -57,7 +59,7 @@ const TableOfContents = ({ content }: { content: string }) => {
 	return (
 		<nav className="sticky top-24 hidden xl:block">
 			<p className="mb-4 text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-white/30">
-				On This Page
+				{t("onThisPage")}
 			</p>
 			<ul className="space-y-1 border-l-2 border-gray-100 dark:border-white/8">
 				{headings.map(({ id, text, level }) => (

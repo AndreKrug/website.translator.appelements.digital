@@ -1,12 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { memo } from "react";
 import RatingStars from "@/components/RatingStars";
-import type { ReviewsProps } from "@/types";
+import type { Review } from "@/types";
 import ReviewCard from "./ReviewCard";
 
-const Reviews = ({ items }: ReviewsProps) => {
+const Reviews = () => {
+	const t = useTranslations("reviews");
+	const items = t.raw("items") as Review[];
 	const [featured, ...rest] = items;
 
 	return (
@@ -18,9 +21,10 @@ const Reviews = ({ items }: ReviewsProps) => {
 				transition={{ duration: 0.4 }}
 				className="mb-12 flex flex-col items-center text-center"
 			>
-				<span className="section-label mb-4">Reviews</span>
+				<span className="section-label mb-4">{t("label")}</span>
 				<h2 className="section-heading max-w-2xl">
-					Loved by <span className="accent">thousands of users.</span>
+					{t("headingPrefix")}{" "}
+					<span className="accent">{t("headingAccent")}</span>
 				</h2>
 			</motion.div>
 

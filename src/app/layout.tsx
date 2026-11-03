@@ -1,8 +1,17 @@
 import type { Metadata, Viewport } from "next";
+import { Space_Grotesk } from "next/font/google";
 import BackToTop from "@/components/BackToTop";
 import Footer from "@/components/Footer";
 import { site } from "@/config";
+import LocaleProvider from "@/i18n/LocaleProvider";
 import "./globals.css";
+
+const spaceGrotesk = Space_Grotesk({
+	subsets: ["latin", "latin-ext"],
+	display: "swap",
+	fallback: ["ui-sans-serif", "system-ui", "sans-serif"],
+	variable: "--font-space-grotesk",
+});
 
 export const metadata: Metadata = {
 	metadataBase: new URL(site.url),
@@ -62,19 +71,21 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html lang="de" className={spaceGrotesk.variable} suppressHydrationWarning>
 			<head>
 				<script dangerouslySetInnerHTML={{ __html: themeScript }} />
 			</head>
 			<body
 				suppressHydrationWarning
-				className="bg-gray-50 text-gray-900 dark:bg-[#060606] dark:text-white"
+				className="overflow-x-clip bg-gray-50 text-gray-900 dark:bg-[#060606] dark:text-white"
 			>
-				<div className="mx-auto max-w-375">
-					{children}
-					<Footer name={site.name} logo={site.logo} />
-				</div>
-				<BackToTop />
+				<LocaleProvider>
+					<div className="mx-auto max-w-375">
+						{children}
+						<Footer name={site.name} logo={site.logo} />
+					</div>
+					<BackToTop />
+				</LocaleProvider>
 			</body>
 		</html>
 	);
