@@ -6,3 +6,6 @@ onlyBuiltDependencies:
   - sharp
   - "@next/swc-darwin-arm64"
   - esbuild
+overrides:
+  # @tailwindcss/typography pins 6.0.10 (GHSA-rj75-hqrm-r3gf, fixed in 6.1.5)
+  "@tailwindcss/typography>postcss-selector-parser": 6.1.5
