@@ -8,8 +8,6 @@
 	"nav": {
 		"features": "Funktionen",
 		"screenshots": "Screenshots",
-		"pricing": "Preise",
-		"reviews": "Bewertungen",
 		"faq": "FAQ"
 	},
 	"footer": {
@@ -29,9 +27,7 @@
 	"hero": {
 		"headline": "<hl>Übersetzt</hl> mit KI. Kontrolliert von Ihnen.",
 		"description": "Ihre Texte. Ihre Kontrolle. Professionell übersetzt.",
-		"ratingsSuffix": "Bewertungen",
 		"version": "Version",
-		"requires": "Erfordert",
 		"updated": "Aktualisiert",
 		"scrollAria": "Zum nächsten Abschnitt scrollen"
 	},
@@ -149,61 +145,34 @@
 			}
 		]
 	},
-	"reviews": {
-		"label": "Bewertungen",
-		"headingPrefix": "Geliebt von",
-		"headingAccent": "tausenden Nutzern.",
-		"items": [
-			{
-				"author": "Sarah K.",
-				"rating": 5,
-				"text": "Diese App hat die Art, wie ich meine täglichen Aufgaben verwalte, komplett verändert. Die Oberfläche ist intuitiv und die Leistung ist herausragend!"
-			},
-			{
-				"author": "James M.",
-				"rating": 5,
-				"text": "Ich habe Dutzende ähnlicher Apps ausprobiert, aber diese sticht durch ihre einzigartigen Funktionen und Zuverlässigkeit hervor. Absolut empfehlenswert!"
-			},
-			{
-				"author": "Elena T.",
-				"rating": 4,
-				"text": "Tolle App mit beeindruckendem Funktionsumfang. Das letzte Update hat sie noch besser gemacht. Nur ein paar kleine UI-Verbesserungen fehlen zur Perfektion."
-			},
-			{
-				"author": "Michael R.",
-				"rating": 5,
-				"text": "Der Kundensupport ist außergewöhnlich. Ich hatte ein Problem und es wurde innerhalb weniger Stunden gelöst. Die App selbst ist ebenfalls fantastisch!"
-			}
-		]
-	},
 	"faq": {
 		"label": "FAQ",
 		"headingPrefix": "Fragen?",
 		"headingAccent": "Wir haben Antworten.",
 		"items": [
 			{
-				"question": "Ist die App kostenlos herunterladbar?",
-				"answer": "Ja! Die App ist sowohl im App Store als auch bei Google Play kostenlos herunterladbar. Ein Pro-Plan ist für Nutzer verfügbar, die auf erweiterte Funktionen zugreifen möchten."
+				"question": "Ist der LLM-Translator kostenlos?",
+				"answer": "Ja. Der LLM-Translator ist Open Source unter der Apache-2.0-Lizenz und kostenlos, auch für die kommerzielle Nutzung. Die Installationsdateien finden Sie in den Releases auf {repoHost}."
 			},
 			{
 				"question": "Welche Plattformen werden unterstützt?",
-				"answer": "Die App ist für iOS 13.0+ und Android 8.0+ verfügbar. Eine Web-Version folgt in Kürze."
+				"answer": "Der LLM-Translator läuft auf macOS (.dmg) und Windows (.exe). Da der Quellcode offen ist, können Sie die App auch selbst bauen."
 			},
 			{
-				"question": "Kann ich die App offline nutzen?",
-				"answer": "Kernfunktionen funktionieren vollständig offline. Deine Daten werden automatisch synchronisiert, sobald du wieder online bist."
+				"question": "Welche KI-Modelle kann ich verwenden?",
+				"answer": "Jedes Modell, das über eine OpenAI-kompatible Schnittstelle erreichbar ist: OpenRouter, OpenAI oder lokal über Ollama. API-URL, Schlüssel und Modell legen Sie in den Einstellungen fest."
 			},
 			{
-				"question": "Wie stelle ich meine Käufe wieder her?",
-				"answer": "Öffne die App, gehe zu Einstellungen → Abonnement und tippe auf „Käufe wiederherstellen“. Stelle sicher, dass du mit demselben Konto angemeldet bist, das für den ursprünglichen Kauf verwendet wurde."
+				"question": "Funktioniert die Übersetzung auch offline?",
+				"answer": "Ja, mit einem lokalen Modell, zum Beispiel über Ollama. Cloud-Anbieter wie OpenRouter oder OpenAI benötigen eine Internetverbindung."
 			},
 			{
-				"question": "Sind meine Daten privat und sicher?",
-				"answer": "Absolut. Deine Daten werden bei der Übertragung und Speicherung verschlüsselt. Wir verkaufen oder teilen deine persönlichen Informationen niemals mit Dritten. Details findest du in unserer Datenschutzerklärung."
+				"question": "Bleiben meine Texte privat?",
+				"answer": "Mit einem lokalen Modell verlassen Ihre Texte Ihren Rechner nicht. Nutzen Sie einen Cloud-Anbieter, gehen die Texte an diesen Anbieter, und es gelten dessen Datenschutzbedingungen."
 			},
 			{
-				"question": "Wie erreiche ich den Support?",
-				"answer": "Tippe in den App-Einstellungen auf „Hilfe“ oder schreibe uns eine E-Mail an support@example.com. Wir antworten innerhalb von 24 Stunden an Werktagen."
+				"question": "Wo bekomme ich Hilfe oder eine Anpassung?",
+				"answer": "Fehler und Funktionswünsche melden Sie als Issue auf {repoHost}. Für eine individuelle Anpassung, etwa mit eigenem Branding oder Anbindung an Ihre KI-Infrastruktur, nutzen Sie die Anfrage im Abschnitt Preise."
 			}
 		]
 	},

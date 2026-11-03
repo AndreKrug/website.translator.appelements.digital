@@ -2,7 +2,6 @@ import AppHero from "@/components/AppHero";
 import FAQ from "@/components/FAQ";
 import Features from "@/components/Features";
 import Pricing from "@/components/Pricing";
-import Reviews from "@/components/Reviews";
 import Screenshots from "@/components/Screenshots";
 import { screenshots, site } from "@/config";
 import { fetchStoreData } from "@/fetchStoreData";
@@ -15,10 +14,7 @@ export default async function HomePage() {
 		description: storeData.description,
 		logo: storeData.logo ?? site.logo,
 		storeLinks: storeData.storeLinks ?? site.storeLinks,
-		rating: storeData.rating ?? site.rating,
-		ageRating: storeData.ageRating ?? site.ageRating,
 		version: storeData.version ?? site.version,
-		minimumOS: storeData.minimumOS ?? site.minimumOS,
 		releaseDate: storeData.releaseDate ?? site.releaseDate,
 		screenshots: storeData.screenshots?.map((src) => ({ src })) ?? screenshots,
 	};
@@ -30,10 +26,7 @@ export default async function HomePage() {
 				description={app.description}
 				logo={app.logo}
 				storeLinks={app.storeLinks}
-				rating={app.rating}
-				ageRating={app.ageRating}
 				version={app.version}
-				minimumOS={app.minimumOS}
 				releaseDate={app.releaseDate}
 			/>
 			<section id="screenshots" className="mb-16 scroll-mt-8 md:mb-24">
@@ -44,9 +37,6 @@ export default async function HomePage() {
 			</section>
 			<section id="pricing" className="mb-16 scroll-mt-8 md:mb-24">
 				<Pricing />
-			</section>
-			<section id="reviews" className="mb-16 scroll-mt-8 md:mb-24">
-				<Reviews />
 			</section>
 			<section id="faq" className="mb-16 scroll-mt-8 md:mb-24">
 				<FAQ />

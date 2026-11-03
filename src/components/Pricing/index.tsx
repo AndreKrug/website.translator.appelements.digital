@@ -3,15 +3,9 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { memo } from "react";
-import { site } from "@/config";
+import { fillRepo } from "@/config";
 import type { PricingTier } from "@/types";
 import TierCard from "./TierCard";
-
-// t.raw() skips ICU interpolation, so repository placeholders are filled in here
-const fillRepo = (text: string) =>
-	text
-		.replaceAll("{repoUrl}", site.repository.url)
-		.replaceAll("{repoHost}", site.repository.host);
 
 const Pricing = () => {
 	const t = useTranslations("pricing");

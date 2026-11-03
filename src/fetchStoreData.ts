@@ -17,12 +17,6 @@ function shortenDescription(description: string, maxSentences = 3): string {
 		: sentences.slice(0, maxSentences).join(" ").trim();
 }
 
-function formatRatingCount(count: number): string {
-	if (count >= 1_000_000) return `${(count / 1_000_000).toFixed(1)}M`;
-	if (count >= 1_000) return `${(count / 1_000).toFixed(1)}K`;
-	return count.toString();
-}
-
 function formatReleaseDate(dateString?: string): string | undefined {
 	return dateString
 		? new Date(dateString).toLocaleDateString("en-US", {
@@ -48,13 +42,7 @@ export async function fetchStoreData(): Promise<Partial<StoreData>> {
 			name: data.trackName || data.trackCensoredName,
 			description: shortenDescription(data.description, 2),
 			logo: data.artworkUrl512 || data.artworkUrl100,
-			rating: {
-				score: Math.round(data.averageUserRating * 10) / 10 || 0,
-				count: formatRatingCount(data.userRatingCount || 0),
-			},
-			ageRating: data.contentAdvisoryRating || "4+",
 			version: data.version,
-			minimumOS: data.minimumOsVersion,
 			releaseDate: formatReleaseDate(data.currentVersionReleaseDate),
 			storeLinks: {
 				apple: data.trackViewUrl || "#",

@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { FiChevronDown } from "react-icons/fi";
-import RatingStars from "@/components/RatingStars";
 import type { AppHeroProps } from "@/types";
 import AppInfo from "./AppInfo";
 import StoreButtons from "./StoreButtons";
@@ -20,10 +19,7 @@ const AppHero = ({
 	description,
 	storeLinks,
 	logo,
-	rating,
-	ageRating,
 	version,
-	minimumOS,
 	releaseDate,
 }: AppHeroProps) => {
 	const t = useTranslations("hero");
@@ -40,25 +36,18 @@ const AppHero = ({
 			<div className="relative z-10 flex w-full max-w-2xl flex-1 flex-col items-center pt-28 pb-[380px] sm:pt-36 md:items-start md:justify-center md:pt-40 md:pb-24 lg:max-w-3xl">
 				<motion.div
 					{...up(0)}
-					className="mb-6 flex flex-wrap items-center justify-center gap-3 md:justify-start"
+					className="mb-10 flex flex-wrap items-center justify-center gap-4 md:mb-14 md:justify-start"
 				>
 					<img
 						src={logo}
 						alt={`${title} icon`}
 						fetchPriority="high"
 						loading="eager"
-						className="h-12 w-12 rounded-xl border border-gray-200/50 object-cover shadow-lg dark:border-white/10"
+						className="h-16 w-16 rounded-2xl border border-gray-200/50 object-cover shadow-xl md:h-20 md:w-20 md:rounded-[1.375rem] dark:border-white/10"
 					/>
-					<div className="flex flex-col items-start gap-1">
-						<span className="text-sm font-bold text-heading">{title}</span>
-						<span className="flex items-center gap-2 text-xs text-gray-500 dark:text-white/45">
-							<RatingStars rating={rating.score} />
-							{rating.score} · {rating.count} {t("ratingsSuffix")}
-							<span className="rounded-md border border-gray-200 bg-gray-100 px-1.5 py-0.5 font-medium dark:border-white/10 dark:bg-white/5">
-								{ageRating}
-							</span>
-						</span>
-					</div>
+					<span className="text-xl font-bold text-heading md:text-2xl">
+						{title}
+					</span>
 				</motion.div>
 
 				<motion.h1
@@ -96,7 +85,6 @@ const AppHero = ({
 				<motion.div {...up(0.25)}>
 					<AppInfo
 						version={version}
-						minimumOS={minimumOS}
 						releaseDate={releaseDate}
 						className="md:justify-start"
 					/>

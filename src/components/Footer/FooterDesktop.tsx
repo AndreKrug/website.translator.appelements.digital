@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { FaApple, FaGooglePlay } from "react-icons/fa";
+import { FaApple, FaWindows } from "react-icons/fa";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import SocialLinks from "@/components/SocialLinks";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -69,7 +69,7 @@ const FooterDesktop = ({ name, logo }: FooterProps) => {
 						rel="noopener noreferrer"
 						className="flex items-center gap-2.5 rounded-xl border border-gray-200 bg-white px-4 py-2.5 transition-all duration-200 hover:bg-gray-50 dark:border-white/12 dark:bg-white/6 dark:hover:bg-white/10"
 					>
-						<FaGooglePlay className="h-4 w-4 shrink-0 text-gray-800 dark:text-white" />
+						<FaWindows className="h-4 w-4 shrink-0 text-gray-800 dark:text-white" />
 						<span className="text-left">
 							<span className="block text-[9px] font-normal leading-tight text-gray-500 dark:text-white/45">
 								{t("storeButtons.downloadFor")}

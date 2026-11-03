@@ -5,10 +5,7 @@ export interface AppHeroProps {
 	description?: string;
 	logo: string;
 	storeLinks: { apple: string; google: string };
-	rating: { score: number; count: string };
-	ageRating: string;
 	version?: string;
-	minimumOS?: string;
 	releaseDate?: string;
 }
 
@@ -21,13 +18,6 @@ export interface Feature {
 export interface FAQItem {
 	question: string;
 	answer: string;
-}
-
-export interface Review {
-	author: string;
-	rating: number;
-	text: string;
-	avatar?: string;
 }
 
 export interface SocialLink {
@@ -58,10 +48,7 @@ export interface StoreData {
 	name: string;
 	description: string;
 	logo: string;
-	rating: { score: number; count: string };
-	ageRating: string;
 	version?: string;
-	minimumOS?: string;
 	releaseDate?: string;
 	screenshots: string[];
 	storeLinks: { apple: string; google: string };
@@ -77,7 +64,6 @@ export interface StoreButtonsProps {
 export interface AppInfoProps {
 	version?: string;
 	className?: string;
-	minimumOS?: string;
 	releaseDate?: string;
 }
 
@@ -91,18 +77,8 @@ export interface BreadcrumbsProps {
 	items: BreadcrumbItem[];
 }
 
-export interface RatingStarsProps {
-	rating: number;
-	max?: number;
-}
-
 export interface FeatureCardProps {
 	feature: Feature;
-	index: number;
-}
-
-export interface ReviewCardProps {
-	review: Review;
 	index: number;
 }
 

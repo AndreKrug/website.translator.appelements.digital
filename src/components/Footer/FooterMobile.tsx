@@ -34,7 +34,7 @@ const FooterMobile = ({ name, logo }: FooterProps) => {
 			<div className="flex gap-8">
 				<nav className="flex flex-1 gap-8">
 					<div className="flex flex-col gap-3">
-						{NAV_LINKS.slice(0, 3).map(({ key, href }) => (
+						{NAV_LINKS.slice(0, 2).map(({ key, href }) => (
 							<a
 								key={key}
 								href={href}
@@ -45,7 +45,7 @@ const FooterMobile = ({ name, logo }: FooterProps) => {
 						))}
 					</div>
 					<div className="flex flex-col gap-3">
-						{NAV_LINKS.slice(3).map(({ key, href }) => (
+						{NAV_LINKS.slice(2).map(({ key, href }) => (
 							<a
 								key={key}
 								href={href}

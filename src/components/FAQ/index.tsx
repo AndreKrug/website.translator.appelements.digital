@@ -3,12 +3,16 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { memo } from "react";
+import { fillRepo } from "@/config";
 import type { FAQItem } from "@/types";
 import FAQCard from "./FAQCard";
 
 const FAQ = () => {
 	const t = useTranslations("faq");
-	const items = t.raw("items") as FAQItem[];
+	const items = (t.raw("items") as FAQItem[]).map((item) => ({
+		question: fillRepo(item.question),
+		answer: fillRepo(item.answer),
+	}));
 
 	return (
 		<div>

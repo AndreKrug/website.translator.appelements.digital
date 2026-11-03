@@ -17,6 +17,12 @@ const repository = {
 	url: "https://github.com/AndreKrug/app.translate",
 };
 
+/** Fills `{repoUrl}` / `{repoHost}` in message texts read via `t.raw()`, which skips ICU interpolation */
+export const fillRepo = (text: string) =>
+	text
+		.replaceAll("{repoUrl}", repository.url)
+		.replaceAll("{repoHost}", repository.host);
+
 const version = "0.0.4";
 
 export const site = {
@@ -32,13 +38,7 @@ export const site = {
 		// Windows EXE download URL
 		google: `${repository.url}/releases/download/v${version}/translator-windows-setup-${version}.exe`,
 	},
-	rating: {
-		score: 4.8,
-		count: "1.2K",
-	},
-	ageRating: "4+",
 	version,
-	minimumOS: "13.0",
 	releaseDate: "July 05, 2026",
 	social: [
 		{ url: "#", icon: "RiInstagramFill", label: "Instagram" },

@@ -3,14 +3,9 @@
 import { useTranslations } from "next-intl";
 import type { AppInfoProps } from "@/types";
 
-const AppInfo = ({
-	version,
-	minimumOS,
-	releaseDate,
-	className = "",
-}: AppInfoProps) => {
+const AppInfo = ({ version, releaseDate, className = "" }: AppInfoProps) => {
 	const t = useTranslations("hero");
-	if (!version && !minimumOS && !releaseDate) return null;
+	if (!version && !releaseDate) return null;
 	return (
 		<div className={`flex flex-wrap justify-center gap-2 ${className}`}>
 			{version && (
@@ -19,14 +14,6 @@ const AppInfo = ({
 						{t("version")}
 					</span>
 					<span className="font-semibold text-heading">{version}</span>
-				</span>
-			)}
-			{minimumOS && (
-				<span className="info-badge text-xs">
-					<span className="font-medium text-gray-500 dark:text-white/40">
-						{t("requires")}
-					</span>
-					<span className="font-semibold text-heading">iOS {minimumOS}+</span>
 				</span>
 			)}
 			{releaseDate && (
