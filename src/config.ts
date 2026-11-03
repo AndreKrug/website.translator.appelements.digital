@@ -28,7 +28,7 @@ const version = "0.0.4";
 export const site = {
 	name: "LLM-Translator",
 	url: "https://translator.appelements.digital",
-	description: "Ihre Texte. Ihre Kontrolle. Professionell übersetzt.",
+	description: "Deine Texte. Deine Kontrolle. Professionell übersetzt.",
 	logo: "/AppIcon.png",
 	keywords: ["mobile app", "landing page", "nextjs", "react", "typescript"],
 	repository,

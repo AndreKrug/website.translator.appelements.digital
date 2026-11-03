@@ -1,6 +1,6 @@
 {
 	"meta": {
-		"description": "Ihre Texte. Ihre Kontrolle. Professionell übersetzt."
+		"description": "Deine Texte. Deine Kontrolle. Professionell übersetzt."
 	},
 	"common": {
 		"backToTop": "Nach oben"
@@ -13,7 +13,7 @@
 	"footer": {
 		"product": "Produkt",
 		"legal": "Rechtliches",
-		"followUs": "Folgen Sie uns",
+		"followUs": "Folge uns",
 		"privacyPolicy": "Datenschutz",
 		"termsOfService": "Nutzungsbedingungen",
 		"allRightsReserved": "Alle Rechte vorbehalten.",
@@ -25,8 +25,8 @@
 		"windows": "Windows (.exe)"
 	},
 	"hero": {
-		"headline": "<hl>Übersetzt</hl> mit KI. Kontrolliert von Ihnen.",
-		"description": "Ihre Texte. Ihre Kontrolle. Professionell übersetzt.",
+		"headline": "<hl>Übersetzt</hl> mit KI. Kontrolliert von dir.",
+		"description": "Deine Texte. Deine Kontrolle. Professionell übersetzt.",
 		"version": "Version",
 		"updated": "Aktualisiert",
 		"scrollAria": "Zum nächsten Abschnitt scrollen"
@@ -47,7 +47,7 @@
 			},
 			"local": {
 				"title": "Lokales LLM",
-				"description": "Mit Ollama oder jedem OpenAI-kompatiblen Endpunkt verbinden, alternativ OpenRouter oder OpenAI. Mit einem lokalen Modell verlassen Ihre Texte nie Ihren Rechner."
+				"description": "Mit Ollama oder jedem OpenAI-kompatiblen Endpunkt verbinden, alternativ OpenRouter oder OpenAI. Mit einem lokalen Modell verlassen deine Texte nie deinen Rechner."
 			}
 		}
 	},
@@ -63,34 +63,34 @@
 		"headingAccent": "in einer Applikation.",
 		"items": [
 			{
-				"title": "Hauptfunktion",
-				"description": "Beschreibe hier deine Hauptfunktion. Was macht sie besonders?",
-				"icon": "FiStar"
+				"title": "Standard-Übersetzer",
+				"description": "Text eingeben, Zielsprache wählen, fertig. Die Ausgangssprache wird automatisch erkannt, bis zu 50.000 Zeichen pro Übersetzung.",
+				"icon": "MdTranslate"
 			},
 			{
-				"title": "Blitzschnell",
-				"description": "Optimiert für Geschwindigkeit — alles fühlt sich sofort an, auch auf älteren Geräten.",
-				"icon": "FiZap"
+				"title": "Chat-Übersetzer",
+				"description": "Übersetzen im Gesprächsverlauf: Zielsprache einmal wählen und Nachricht für Nachricht übersetzen lassen.",
+				"icon": "FiMessageSquare"
 			},
 			{
-				"title": "Offline-Modus",
-				"description": "Alle deine Daten sind auch offline verfügbar. Kein Internet? Kein Problem.",
-				"icon": "FiBox"
+				"title": "Lokale LLMs",
+				"description": "Modelle über Ollama direkt auf dem eigenen Rechner nutzen. Ohne Internet und ohne dass Texte das Gerät verlassen.",
+				"icon": "FiCpu"
 			},
 			{
-				"title": "Privat & Sicher",
-				"description": "Ende-zu-Ende-Verschlüsselung schützt deine Daten. Wir verkaufen deine Informationen niemals.",
-				"icon": "FiShield"
+				"title": "Freie Modellwahl",
+				"description": "OpenRouter, OpenAI oder jeder OpenAI-kompatible Endpunkt. API-URL, Modell und Token-Limit sind frei einstellbar.",
+				"icon": "LuPlug"
 			},
 			{
-				"title": "Cloud-Synchronisation",
-				"description": "Bleib auf allen Geräten synchron. Änderungen erscheinen sofort überall.",
-				"icon": "FiCloud"
-			},
-			{
-				"title": "Vollständig anpassbar",
-				"description": "Passe die Erfahrung mit leistungsstarken Einstellungen an deinen Workflow an.",
+				"title": "Eigene Prompts und Sprachen",
+				"description": "Prompts und Sprachliste an den eigenen Bedarf anpassen. Der verwendete Prompt lässt sich jederzeit anzeigen.",
 				"icon": "FiSliders"
+			},
+			{
+				"title": "Eigenes Logo und Darstellung",
+				"description": "Logo und Erscheinungsbild anpassen, damit die App zum Unternehmen passt.",
+				"icon": "FiImage"
 			}
 		]
 	},
@@ -132,10 +132,10 @@
 			{
 				"name": "Individuelle Anpassung",
 				"price": "Auf Anfrage",
-				"description": "Sie brauchen den LLM-Translator zugeschnitten auf Ihr Unternehmen? Ich setze Ihre Anforderungen um.",
+				"description": "Du brauchst den LLM-Translator zugeschnitten auf dein Unternehmen? Ich setze deine Anforderungen um.",
 				"features": [
 					"Eigenes Branding und Logo",
-					"Anbindung an Ihre KI-Infrastruktur",
+					"Anbindung an deine KI-Infrastruktur",
 					"Vorkonfigurierte Prompts und Sprachen",
 					"Installation und Einrichtung",
 					"Neue Funktionen nach Bedarf"
@@ -152,15 +152,15 @@
 		"items": [
 			{
 				"question": "Ist der LLM-Translator kostenlos?",
-				"answer": "Ja. Der LLM-Translator ist Open Source unter der Apache-2.0-Lizenz und kostenlos, auch für die kommerzielle Nutzung. Die Installationsdateien finden Sie in den Releases auf {repoHost}."
+				"answer": "Ja. Der LLM-Translator ist Open Source unter der Apache-2.0-Lizenz und kostenlos, auch für die kommerzielle Nutzung. Die Installationsdateien findest du in den Releases auf {repoHost}."
 			},
 			{
 				"question": "Welche Plattformen werden unterstützt?",
-				"answer": "Der LLM-Translator läuft auf macOS (.dmg) und Windows (.exe). Da der Quellcode offen ist, können Sie die App auch selbst bauen."
+				"answer": "Der LLM-Translator läuft auf macOS (.dmg) und Windows (.exe). Da der Quellcode offen ist, kannst du die App auch selbst bauen."
 			},
 			{
 				"question": "Welche KI-Modelle kann ich verwenden?",
-				"answer": "Jedes Modell, das über eine OpenAI-kompatible Schnittstelle erreichbar ist: OpenRouter, OpenAI oder lokal über Ollama. API-URL, Schlüssel und Modell legen Sie in den Einstellungen fest."
+				"answer": "Jedes Modell, das über eine OpenAI-kompatible Schnittstelle erreichbar ist: OpenRouter, OpenAI oder lokal über Ollama. API-URL, Schlüssel und Modell legst du in den Einstellungen fest."
 			},
 			{
 				"question": "Funktioniert die Übersetzung auch offline?",
@@ -168,11 +168,11 @@
 			},
 			{
 				"question": "Bleiben meine Texte privat?",
-				"answer": "Mit einem lokalen Modell verlassen Ihre Texte Ihren Rechner nicht. Nutzen Sie einen Cloud-Anbieter, gehen die Texte an diesen Anbieter, und es gelten dessen Datenschutzbedingungen."
+				"answer": "Mit einem lokalen Modell verlassen deine Texte deinen Rechner nicht. Nutzt du einen Cloud-Anbieter, gehen die Texte an diesen Anbieter, und es gelten dessen Datenschutzbedingungen."
 			},
 			{
 				"question": "Wo bekomme ich Hilfe oder eine Anpassung?",
-				"answer": "Fehler und Funktionswünsche melden Sie als Issue auf {repoHost}. Für eine individuelle Anpassung, etwa mit eigenem Branding oder Anbindung an Ihre KI-Infrastruktur, nutzen Sie die Anfrage im Abschnitt Preise."
+				"answer": "Fehler und Funktionswünsche meldest du als Issue auf {repoHost}. Für eine individuelle Anpassung, etwa mit eigenem Branding oder Anbindung an deine KI-Infrastruktur, nutze die Anfrage im Abschnitt Preise."
 			}
 		]
 	},

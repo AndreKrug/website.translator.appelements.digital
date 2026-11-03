@@ -63,34 +63,34 @@
 		"headingAccent": "in one application.",
 		"items": [
 			{
-				"title": "Main Feature",
-				"description": "Describe your main feature here. What makes it special?",
-				"icon": "FiStar"
+				"title": "Standard translator",
+				"description": "Enter your text, pick a target language, done. The source language is detected automatically, up to 50,000 characters per translation.",
+				"icon": "MdTranslate"
 			},
 			{
-				"title": "Lightning Fast",
-				"description": "Optimized for speed so everything feels instant, even on older devices.",
-				"icon": "FiZap"
+				"title": "Chat translator",
+				"description": "Translate in a conversation: pick the target language once and translate message by message.",
+				"icon": "FiMessageSquare"
 			},
 			{
-				"title": "Offline Mode",
-				"description": "All your data is available offline. No internet? No problem.",
-				"icon": "FiBox"
+				"title": "Local LLMs",
+				"description": "Run models via Ollama on your own computer. No internet needed, and your texts never leave the device.",
+				"icon": "FiCpu"
 			},
 			{
-				"title": "Private & Secure",
-				"description": "End-to-end encryption keeps your data safe. We never sell your info.",
-				"icon": "FiShield"
+				"title": "Any model you like",
+				"description": "OpenRouter, OpenAI or any OpenAI-compatible endpoint. API URL, model and token limit are fully configurable.",
+				"icon": "LuPlug"
 			},
 			{
-				"title": "Cloud Sync",
-				"description": "Stay in sync across all your devices. Changes appear everywhere instantly.",
-				"icon": "FiCloud"
-			},
-			{
-				"title": "Fully Customizable",
-				"description": "Tailor the experience to your workflow with powerful settings.",
+				"title": "Custom prompts and languages",
+				"description": "Adapt prompts and the language list to your needs. You can view the prompt in use at any time.",
 				"icon": "FiSliders"
+			},
+			{
+				"title": "Your logo and appearance",
+				"description": "Customize the logo and look so the app matches your organization.",
+				"icon": "FiImage"
 			}
 		]
 	},

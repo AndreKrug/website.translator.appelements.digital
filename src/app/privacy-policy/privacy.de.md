@@ -4,7 +4,7 @@
 
 ## Einleitung
 
-Ihre Privatsphäre ist uns wichtig. Diese Datenschutzerklärung erläutert, wie wir Ihre Informationen bei der Nutzung unserer App erheben, verwenden und schützen.
+Deine Privatsphäre ist uns wichtig. Diese Datenschutzerklärung erläutert, wie wir deine Informationen bei der Nutzung unserer App erheben, verwenden und schützen.
 
 ## Welche Informationen wir erheben
 

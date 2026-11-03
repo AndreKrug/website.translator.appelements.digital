@@ -2,13 +2,18 @@ import type { IconType } from "react-icons";
 import {
 	FiBox,
 	FiCloud,
+	FiCpu,
 	FiHeart,
+	FiImage,
+	FiMessageSquare,
 	FiShield,
 	FiSliders,
 	FiStar,
 	FiTrendingUp,
 	FiZap,
 } from "react-icons/fi";
+import { LuPlug } from "react-icons/lu";
+import { MdTranslate } from "react-icons/md";
 import {
 	RiDiscordFill,
 	RiFacebookFill,
@@ -29,6 +34,11 @@ const iconMap: Record<string, IconType> = {
 	FiShield,
 	FiCloud,
 	FiSliders,
+	FiCpu,
+	FiImage,
+	FiMessageSquare,
+	LuPlug,
+	MdTranslate,
 	RiInstagramFill,
 	RiTelegram2Fill,
 	RiTwitterXFill,
